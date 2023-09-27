@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function capitalize(str) {
+        str = str.toLowerCase();
+        let strArr = str.split(" ");
+
+        let result = [];
+        for (let i = 0; i < strArr.length; i++) {
+          if (strArr[i] !== "") {
+            let firstLetterCapitalize = strArr[i][0].toUpperCase();
+            result.push(firstLetterCapitalize.concat(strArr[i].slice(1)));
+          }
+        }
+        return result.join(" ");
+      }
+
+      console.log(capitalize("the quick brown fox"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function checkPalidrome(str) {
+        let strReverse = str.slice(0).split("").reverse().join("");
+        console.log(strReverse);
+
+        if (str === strReverse) {
+          alert("yes this is palidrome");
+        } else {
+          alert("sorry not palidrome");
+        }
+      }
+
+      checkPalidrome("radar");
+    </script>
+  </body>
+</html>

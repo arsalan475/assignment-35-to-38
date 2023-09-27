@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = "web development tutorial";
+      function findLongest(string) {
+        string = string.slice(0).split(" ");
+        let size = [];
+        let longest;
+        for (let i = 0; i < string.length; i++) {
+          size.push(string[i].length);
+          if (Math.max(...size) === string[i].length) {
+            longest = string[i];
+          }
+        }
+        return { str, longest };
+      }
+
+      console.log(findLongest(str));
+    </script>
+  </body>
+</html>
